@@ -1,10 +1,17 @@
+:root {
+    --color: white;
+    --bgc: #f1f1f3;
+    --gap: 30px;
+    --p: 15px;
+    --m: 30px;
+    --border-radius: 10px;
+    --box-shadow: 0px 0px 30px #0001;
+}
+
 body {
-    height: 100vh;
-    color: white;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    color: var(--color);
+    background-color: var(--bgc);
+
 }
 
 * {
@@ -14,6 +21,7 @@ body {
 
 header {
     vertical-align: baseline;
+    margin: 0px;
     padding: 3vh;
     background-color: #006a3f;
     border-bottom: 1px solid rgb(41, 41, 41);
@@ -23,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    text-shadow: 3px 3px 3px #0001;
 }
 
 h1 {
@@ -37,32 +45,54 @@ h1:first-letter {
 }
 
 h2 {
-    margin-left: 5px;
     font-size: 1em;
+    margin-left: 5px;
 }
 
-section {
-    display: grid;
-    grid-auto-rows: 20vh;
-    grid-template-columns: repeat(8, 1fr);
-    padding: 4vh;
-    background-color: white;
-    gap: 4vh;
-}
-
-article {
+section > article {
     position: relative;
+    text-align: center;
+    text-shadow: 3px 3px 3px #0001;
+    padding: var(--p);
+    background-color: #bf3a2b;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
-article span {
+section > article > span {
+    font-family: Arial;
+    font-size: 24px;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
 }
 
-section > * {
-    background-color: #bf3a2b;
-    text-align: center;
+.grid {
+    display: grid;
+}
+
+.grid.grid-8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.grid.grid-auto-rows {
+    grid-auto-rows: 20vh;
+}
+
+.gap {
+    grid-gap: var(--gap);
+}
+
+.m {
+    margin: var(--m);
+}
+
+.scale-hover {
+    transition: all .2s ease-in-out;
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
 }
 
 .grid-col-span-2 {
@@ -88,23 +118,18 @@ section > * {
 .purple {
     background-color: #8f44ad;
 }
-
 .red {
     background-color: #860000;
 }
-
 .lightgreen {
     background-color: #27ae5f;
 }
-
 .yellow {
     background-color: #f39c11;
 }
-
 .orange {
     background-color: #d25400; 
 }
-
 .green {
     background-color: #006b41;
 }
