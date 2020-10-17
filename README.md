@@ -1,1 +1,1 @@
-Free Wall
+Макет сайта «Free Wall»
