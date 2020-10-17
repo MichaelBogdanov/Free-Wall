@@ -1,0 +1,110 @@
+body {
+    height: 100vh;
+    color: white;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+header {
+    vertical-align: baseline;
+    padding: 3vh;
+    background-color: #006a3f;
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h1:first-letter {
+    font-size: 60px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-left: 5px;
+    font-size: 1em;
+}
+
+section {
+    display: grid;
+    grid-auto-rows: 20vh;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 4vh;
+    background-color: white;
+    gap: 4vh;
+}
+
+article {
+    position: relative;
+}
+
+article span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+section > * {
+    background-color: #bf3a2b;
+    text-align: center;
+}
+
+.grid-col-span-2 {
+    grid-column-end: span 2;
+}
+.grid-col-span-3 {
+    grid-column-end: span 3;
+}
+.grid-col-span-4 {
+    grid-column-end: span 4;
+}
+
+.grid-row-span-2 {
+    grid-row-end: span 2;
+}
+.grid-row-span-3 {
+    grid-row-end: span 3;
+}
+.grid-row-span-4 {
+    grid-row-end: span 4;
+}
+
+.purple {
+    background-color: #8f44ad;
+}
+
+.red {
+    background-color: #860000;
+}
+
+.lightgreen {
+    background-color: #27ae5f;
+}
+
+.yellow {
+    background-color: #f39c11;
+}
+
+.orange {
+    background-color: #d25400; 
+}
+
+.green {
+    background-color: #006b41;
+}
